@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+
+        #pyramid {
+            line-height: 0;
+            font-size: 30px;
+        }
+
+        body {
+            font-family: "Courier New", monospace;
+            text-align: center;
+        }
+        h1 {
+            background-color: #ba4aa2;
+            color: #d6c5d2;
+            font-weight: bold;
+            padding: 35px 25px 35px 25px;
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+        h2 {
+            background-color: #dbdbdb;
+            border-bottom: 3px solid #ba4aa2;
+            border-right: 3px solid #ba4aa2;
+            border-left: 3px solid #ba4aa2;
+            color: #ba4aa2;
+            font-weight: normal;
+            font-size: normal;
+            margin: 0% 15% 0% 15%;
+            padding: 5% 0% 5% 0%;
+            grid-row: 1;
+        }
+        h3 {
+            background-color: #999999;
+            color: #000000;
+            font-weight: normal;
+            font-size: large;
+            padding: 3% 1% 3% 1%;
+            margin: 0% 15% 0% 15%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-row: 1;
+            border-top: 3px solid #ba4aa2;
+            border-right: 3px solid #ba4aa2;
+            border-left: 3px solid #ba4aa2;
+        }
+    </style>
+</head>
+<body >
+    <h1>Pyramid Slide</h1>
+
+    <br>
+        <h3>
+            <div>
+                <label for="symbols">Brick symbol:</label>
+    
+                <select name="symbols" id="symbols" onchange="determineHeightAndThenDrawPyramid()">
+                    <option value="#">#</option>
+                    <option value="@">@</option>
+                    <option value ="X">X</option>
+                    <option value ="$">$</option>
+                </select>
+            </div>
+            <div>
+            <form>
+                <label for="height">How high?</label>
+                <input type="range" id="height" name="height" min="1" max="20" oninput="determineHeightAndThenDrawPyramid()">
+            </form>
+            </div>
+        </h3>
+    
+        <br><br>
+
+        <br><br>
+        <h2 id="pyramid"></h2>
+        <script src="mario.js"></script>
+</body>
+</html>
